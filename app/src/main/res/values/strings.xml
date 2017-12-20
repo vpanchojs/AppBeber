@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">AppBeber</string>
+    <string name="login.message.dni">Cédula</string>
+    <string name="login.message.email">Correo Electrónico</string>
+    <string name="login.message.password">Contraseña</string>
+    <string name="login.textview.forget_password">Olvidé mi contraseña</string>
+    <string name="login.button.signin">Iniciar Sesión</string>
+    <string name="login.chip.login_facebook">Facebook</string>
+    <string name="login.chip.login_google">Google</string>
+    <string name="login.chip.create_account">Crear Cuenta</string>
+    <string name="login.message.signin">Ingresar con</string>
+    <string name="login.error.message.signin">Imposible iniciar sesión, %s</string>
+
+
+    <string name="registration.message.dni">Cédula</string>
+    <string name="registration.message.name">Nombres</string>
+    <string name="registration.message.lastname">Apellidos</string>
+    <string name="registration.message.birthdate">Fecha de nacimiento</string>
+    <string name="registration.message.phone">Celular</string>
+    <string name="registration.message.email">Correo electrónico</string>
+    <string name="registration.message.password">Contrasena</string>
+    <string name="registration.message.terms_condition">Al ingresar, usted acepta nuestros terminos y condiciones</string>
+    <string name="registration.button.create_account">Crear Cuenta</string>
+    <string name="registration.success.message.signup">Usuario registrado con exito</string>
+    <string name="registration.error.message.signup">Imposible registrar nuevo usuario, %s</string>
+
+
+    <string name="title_activity_main">Principal</string>
+    <string name="title_home">Productos</string>
+    <string name="title_orders">Pedidos</string>
+    <string name="title_account">Perfil</string>
+    <string name="action_settings">Ajustes</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_tab">TabActivity</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_car_buy">Carrito de Compras</string>
+    <string name="action_singout">Cerrar Sesion</string>
+    <string name="main_message_picture_source">Seleccion de donde obtener su imagen</string>
+    <string name="title_activity_details_order">DetailsOrderActivity</string>
+
+
+</resources>

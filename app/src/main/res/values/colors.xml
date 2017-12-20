@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#455A64</color>
+    <color name="colorPrimaryDark">#37474F</color>
+    <color name="colorPrimaryLight">#747474</color>
+    <color name="colorAccent">#FF9800</color>
+    <color name="colorPrimaryText">#212121</color>
+    <color name="colorSecondaryText">#757575</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#BDBDBD</color>
+
+    <color name="dividerAccount">#ccdadada</color>
+    <color name="coloBtnBlueNormal">@color/colorPrimaryDark</color>
+    <color name="coloBtnBlueDisable">#83adc4</color>
+
+    <color name="coloBtnGreenDisable">#8ec996</color>
+
+    <color name="procesando">#FFD600</color>
+    <color name="preparado">#0091EA</color>
+    <color name="enviando">#2962FF</color>
+    <color name="entregado">#1B5E20</color>
+    <color name="cancelado">#D50000</color>
+</resources>

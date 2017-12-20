@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.jcode.tebocydelevery.buy.ui.CarBuyActivity">
+    <item
+        android:id="@+id/action_add_product"
+        android:icon="@drawable/ic_add_product"
+        android:title="Agregar producto"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_cancel_buy"
+        android:icon="@drawable/ic_remove_shopping"
+        android:title="Cancelar Compra"
+        app:showAsAction="always" />
+
+</menu>
