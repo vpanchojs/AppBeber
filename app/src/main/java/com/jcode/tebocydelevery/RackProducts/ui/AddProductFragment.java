@@ -10,6 +10,7 @@ import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.jcode.tebocydelevery.R;
@@ -36,6 +37,11 @@ public class AddProductFragment extends DialogFragment implements DialogInterfac
     TextView tvTitle;
     @BindView(R.id.tv_message)
     TextView tvMessage;
+    @BindView(R.id.btn_remover)
+    Button btnRemover;
+    @BindView(R.id.rl_button)
+    RelativeLayout rlButton;
+    Unbinder unbinder2;
     private OnAddProductInteractionListener mListener;
     private int position;
     private Product product;
@@ -83,7 +89,9 @@ public class AddProductFragment extends DialogFragment implements DialogInterfac
         if (dialogo != null) {
             etLot.setText(product.getLot() + "");
             etStock.setText(product.getStock() + "");
-            tvMessage.setText("Ingrese la cantidad de " + product.getName() + " que desee agregar a su carrito de compras");
+            if (product.getLot() > 0)
+                btnRemover.setVisibility(View.VISIBLE);
+            tvMessage.setText("Ingrese la cantidad de " + product.getName() + "(" + product.getContent() + ") que desee agregar a su carrito de compras");
             btnAdd.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -102,6 +110,13 @@ public class AddProductFragment extends DialogFragment implements DialogInterfac
             btnCancel.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    dismiss();
+                }
+            });
+            btnRemover.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ((RackProductsFragment) getParentFragment()).onAddProductLot(0, position);
                     dismiss();
                 }
             });

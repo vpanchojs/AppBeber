@@ -16,6 +16,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
@@ -68,17 +69,17 @@ public class MyProfileFragment extends Fragment {
     @BindView(R.id.civ_photo_user)
     CircleImageView civPhotoUser;
     @BindView(R.id.et_name)
-    EditText etName;
+    TextInputEditText etName;
     @BindView(R.id.et_lastname)
-    EditText etLastname;
+    TextInputEditText etLastname;
     @BindView(R.id.et_dni)
-    EditText etDni;
+    TextInputEditText etDni;
     @BindView(R.id.et_phone)
-    EditText etPhone;
+    TextInputEditText etPhone;
     @BindView(R.id.et_birthdate)
-    EditText etBirthdate;
+    TextInputEditText etBirthdate;
     @BindView(R.id.et_email)
-    EditText etEmail;
+    TextInputEditText etEmail;
     @BindView(R.id.btn_update_user)
     Button btnUpdateUser;
     Unbinder unbinder;
@@ -459,7 +460,6 @@ public class MyProfileFragment extends Fragment {
 
     public interface OnMyProfileInteractionListener {
         void updateUser();
-
         void updatePhotoUser(String photo);
     }
 }

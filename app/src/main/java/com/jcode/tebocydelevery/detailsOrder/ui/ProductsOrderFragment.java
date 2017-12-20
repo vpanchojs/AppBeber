@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 
 import com.jcode.tebocydelevery.R;
 import com.jcode.tebocydelevery.detailsOrder.adapter.ProductsOrderAdapter;
@@ -31,6 +32,8 @@ public class ProductsOrderFragment extends Fragment {
     @BindView(R.id.rv_products)
     RecyclerView rvProducts;
     Unbinder unbinder;
+    @BindView(R.id.progress_bar)
+    ProgressBar progressBar;
 
     // TODO: Rename and change types of parameters
     private ArrayList<Product> products;
@@ -85,5 +88,6 @@ public class ProductsOrderFragment extends Fragment {
 
     public void updateAdapter() {
         adapter.notifyDataSetChanged();
+        progressBar.setVisibility(View.GONE);
     }
 }

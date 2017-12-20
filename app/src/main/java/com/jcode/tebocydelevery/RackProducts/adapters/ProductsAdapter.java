@@ -10,7 +10,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.android.volley.toolbox.ImageLoader;
 import com.jcode.tebocydelevery.R;
+import com.jcode.tebocydelevery.main.ui.MainActivity;
 import com.jcode.tebocydelevery.models.Product;
 
 import java.util.List;
@@ -44,13 +46,14 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.ViewHo
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         Product p = data.get(position);
-        holder.setOnItemClickListener(p, listener, position,holder.tvProductLot);
+        holder.setOnItemClickListener(p, listener, position, holder.tvProductLot);
         holder.setOnItemLongClickListener(p, listenerLong, position);
         //holder.civLogoTerminal
         holder.etContent.setText(p.getDescription());
         holder.tvName.setText(p.getName());
         holder.btnPrice.setText(p.getPrice() + "");
         holder.etStock.setText(p.getStock() + "");
+        MainActivity.imageLoader.get(p.getUrl_photo(), ImageLoader.getImageListener(holder.civPhotoProduct, R.drawable.ic_person, R.drawable.ic_cancel));
         if (p.getLot() > 0) {
             holder.tvProductLot.setText(p.getLot() + "");
             holder.tvProductLot.setVisibility(View.VISIBLE);
@@ -105,7 +108,7 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.ViewHo
             ibAddProduct.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    listener.addProductCarBuy(product, position,tvProductLot);
+                    listener.addProductCarBuy(product, position, tvProductLot);
                 }
             });
         }

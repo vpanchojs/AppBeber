@@ -46,10 +46,10 @@ import com.jcode.tebocydelevery.R;
 import com.jcode.tebocydelevery.buy.BuyPresenter;
 import com.jcode.tebocydelevery.buy.adapters.onEventConfirmOrder;
 import com.jcode.tebocydelevery.buy.adapters.onEventListener;
+import com.jcode.tebocydelevery.main.ui.MainActivity;
 import com.jcode.tebocydelevery.models.Order;
 import com.jcode.tebocydelevery.models.Product;
 import com.jcode.tebocydelevery.models.User;
-import com.jcode.tebocydelevery.main.ui.MainActivity;
 
 import java.util.ArrayList;
 
@@ -273,25 +273,25 @@ public class CarBuyActivity extends AppCompatActivity implements onEventListener
     public boolean validateProducts() {
         if (data.size() > 0) {
             if (order.getPrice_total() < BASE_PRICE) {
-                showMessage("Error, las compras se realizar apartir de 5 dolares");
+                showMessage("Las compras se realizan apartir de 5 dolares");
                 return false;
             } else {
                 return true;
             }
         } else {
 
-            showMessage("Error, no se han agregado productos.");
+            showMessage("Agregue productos");
             return false;
         }
     }
 
 
     public boolean validateReferences() {
-        if (order.getAddress_description().length() > 10) {
+        if (order.getAddress_description().length() > 6) {
 
             return true;
         } else {
-            showMessage("Error, referencia debe tener minimo 10 caracteres.");
+            showMessage("Referencia debe tener un mínimo de 6 caracteres");
             return false;
         }
 
@@ -301,7 +301,7 @@ public class CarBuyActivity extends AppCompatActivity implements onEventListener
     public boolean validateAddress() {
 
         if (order.getAddress() == null) {
-            showMessage("Error, agregue una ubiacion en el mapa");
+            showMessage("Seleccione su ubicación en el mapa");
             return false;
         } else {
             return true;

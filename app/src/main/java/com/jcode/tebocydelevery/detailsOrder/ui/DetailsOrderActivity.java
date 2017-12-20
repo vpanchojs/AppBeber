@@ -122,6 +122,7 @@ public class DetailsOrderActivity extends AppCompatActivity implements DetailsOr
         if (show) {
             progressDialog = new ProgressDialog(this);
             progressDialog.setMessage("Cancelando Pedido");
+            progressDialog.setCancelable(false);
             progressDialog.show();
         } else {
             progressDialog.dismiss();

@@ -8,7 +8,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.android.volley.toolbox.ImageLoader;
 import com.jcode.tebocydelevery.R;
+import com.jcode.tebocydelevery.main.ui.MainActivity;
 import com.jcode.tebocydelevery.models.Product;
 
 import java.util.ArrayList;
@@ -46,6 +48,7 @@ public class ProductsOrderAdapter extends RecyclerView.Adapter<ProductsOrderAdap
         holder.tvName.setText(p.getName());
         holder.etPrice.setText("$ " + (p.getPrice() * p.getLot()) + "");
         holder.etLot.setText(p.getLot() + "");
+        MainActivity.imageLoader.get(p.getUrl_photo(), ImageLoader.getImageListener(holder.ivProduct, R.drawable.ic_person, R.drawable.ic_cancel));
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {

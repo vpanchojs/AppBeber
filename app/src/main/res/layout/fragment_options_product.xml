@@ -78,13 +78,24 @@
         android:layout_marginRight="10dp">
 
         <Button
+            android:id="@+id/btn_remover"
+            style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/btn_cancel"
+            android:layout_toStartOf="@+id/btn_cancel"
+            android:text="Remover"
+            android:textColor="@color/cancelado"
+            android:visibility="gone" />
+
+        <Button
             android:id="@+id/btn_cancel"
             style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toLeftOf="@+id/btn_add"
             android:layout_toStartOf="@+id/btn_add"
-            android:text="Cancelar" />
+            android:text="Omitir" />
 
         <Button
             android:id="@+id/btn_add"

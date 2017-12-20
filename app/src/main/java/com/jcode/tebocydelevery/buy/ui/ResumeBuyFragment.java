@@ -83,8 +83,6 @@ public class ResumeBuyFragment extends DialogFragment implements DialogInterface
         } else {
             order = new Order();
         }
-
-
     }
 
     @NonNull

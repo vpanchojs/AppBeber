@@ -185,7 +185,6 @@ public class RackProductsFragment extends Fragment implements onItemClickListene
             if (!products_car.contains(product)) {
                 products_car.add(product);
             }
-
             showMessage("Producto Agregado");
         } else {
             products_car.remove(product);

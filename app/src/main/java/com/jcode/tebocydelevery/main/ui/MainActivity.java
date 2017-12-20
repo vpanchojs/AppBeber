@@ -101,7 +101,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     @Override
     protected void onStart() {
         super.onStart();
-        //Log.e(TAG, "START");
         presenter.onStart();
 
     }
@@ -109,9 +108,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     @Override
     protected void onStop() {
         super.onStop();
-        //   Log.e(TAG, "STOP");
         presenter.unsubscribeProductsList();
-        presenter.unsubscribeMyOrders();
         presenter.unsubscribeMyProfile();
         presenter.onStop();
     }
@@ -120,8 +117,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     protected void onDestroy() {
         super.onDestroy();
         presenter.onDestroy();
-        // Log.e(TAG, "DESTROY");
-
     }
 
     @Override
@@ -213,11 +208,16 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
     @Override
     public void toCarBuy() {
-        if (me.getDni() != null & me.getPhone() != null) {
-            navigationToBuyCar();
+        if (me != null) {
+            if (me.getDni() != null & me.getPhone() != null) {
+                navigationToBuyCar();
+            } else {
+                navigationToProfileUser();
+            }
         } else {
-            navigationToProfileUser();
+            Toast.makeText(this, "Obteniendo información, intente nuevamente", Toast.LENGTH_LONG).show();
         }
+
 
     }
 
@@ -310,12 +310,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                     break;
             }
         }
-    }
-
-    //Revisar
-    @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        //No call for super(). Bug on API Level > 11.
     }
 
     /*
