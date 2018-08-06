@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.jcode.tebocydelevery.buy.ui.CarBuyActivity">
+    tools:context="com.aitec.appbeber.buy.ui.CarBuyActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -14,7 +14,7 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
 
-        <com.jcode.tebocydelevery.buy.ui.NonSwipeableViewPage
+        <com.aitec.appbeber.buy.ui.NonSwipeableViewPage
             android:id="@+id/container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -22,7 +22,7 @@
             android:paddingLeft="@dimen/activity_horizontal_margin"
             android:paddingRight="@dimen/activity_horizontal_margin">
 
-        </com.jcode.tebocydelevery.buy.ui.NonSwipeableViewPage>
+        </com.aitec.appbeber.buy.ui.NonSwipeableViewPage>
 
         <!--
         <android.support.v4.view.ViewPager

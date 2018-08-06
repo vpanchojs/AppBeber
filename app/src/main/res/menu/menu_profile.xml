@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.aitec.appbeber.TabActivity">
+    <item
+        android:id="@+id/action_singout"
+        android:icon="@drawable/ic_signout"
+        android:title="@string/action_singout"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_update_user"
+        android:icon="@drawable/ic_done"
+        android:title="Actualizar Usuario"
+        app:showAsAction="always" />
+</menu>

@@ -16,8 +16,8 @@
 
     <color name="coloBtnGreenDisable">#8ec996</color>
 
-    <color name="procesando">#FFD600</color>
-    <color name="preparado">#0091EA</color>
+    <color name="procesando">#000000</color>
+    <color name="preparado">#ead700</color>
     <color name="enviando">#2962FF</color>
     <color name="entregado">#1B5E20</color>
     <color name="cancelado">#D50000</color>

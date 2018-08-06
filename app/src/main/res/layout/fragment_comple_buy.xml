@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingTop="5dp"
-    tools:context="com.jcode.tebocydelevery.buy.ui.CompleBuyFragment">
+    tools:context="com.aitec.appbeber.buy.ui.CompleBuyFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -34,7 +34,7 @@
                 android:layout_toEndOf="@+id/iv_map"
                 android:layout_toRightOf="@+id/iv_map"
                 android:gravity="center_vertical"
-                android:text="Direccion de Envio"
+                android:text="Dirección de Envio"
                 android:textSize="16sp" />
 
         </RelativeLayout>
@@ -46,28 +46,6 @@
             android:layout_marginLeft="29dp"
             android:layout_weight="0.3">
 
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_centerInParent="true"
-                android:elevation="5dp"
-                android:tint="@color/colorAccent"
-                app:srcCompat="@drawable/ic_filter_center" />
-
-
-            <ImageButton
-                android:id="@+id/ib_my_location"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_margin="4dp"
-                android:background="@color/cardview_light_background"
-                android:elevation="5dp"
-                android:tint="@color/colorAccent"
-                app:srcCompat="@drawable/ic_my_location" />
-
             <com.mapbox.mapboxsdk.maps.MapView
                 android:id="@+id/mapView"
                 android:layout_width="match_parent"
@@ -76,16 +54,30 @@
                 tools:mapbox_cameraTargetLng="-79.5562"
                 tools:mapbox_cameraZoom="18"
                 tools:mapbox_styleUrl="mapbox://styles/mapbox/streets-v10" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:tint="@color/colorAccent"
+                app:srcCompat="@drawable/ic_my_location" />
+
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/ib_my_location"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_margin="4dp"
+                android:background="@color/cardview_light_background"
+                app:fabSize="mini"
+                app:srcCompat="@drawable/ic_my_location" />
+
+
         </RelativeLayout>
 
-        <!--
-        <org.osmdroid.views.MapView
-            android:id="@+id/mv_map"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.3"
-            android:layout_marginLeft="29dp" />
--->
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -97,7 +89,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:enabled="false"
-                android:hint="Direccion"
+                android:hint="Dirección"
                 android:textColor="@color/colorPrimaryText" />
         </android.support.design.widget.TextInputLayout>
 

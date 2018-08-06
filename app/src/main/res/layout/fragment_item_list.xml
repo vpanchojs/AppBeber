@@ -5,14 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/radius_dialog"
-    tools:context="com.jcode.tebocydelevery.myOrders.ui.GuiStateOrderFragment">
+    tools:context="com.aitec.appbeber.myOrders.ui.GuiStateOrderFragment">
 
     <TextView
         android:id="@+id/tv_title_guide"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
         android:text="Guia de Estado para Pedidos"
+        android:textColor="@color/colorPrimary"
         android:textSize="20sp" />
 
     <android.support.v7.widget.RecyclerView
@@ -20,8 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/btn_accept"
-        android:layout_below="@+id/tv_title_guide"
-        android:padding="@dimen/activity_horizontal_margin"></android.support.v7.widget.RecyclerView>
+        android:layout_below="@+id/tv_title_guide" />
 
     <Button
         android:id="@+id/btn_accept"

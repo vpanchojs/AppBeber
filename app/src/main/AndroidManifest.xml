@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.jcode.tebocydelevery">
+    package="com.aitec.appbeber">
 
     <uses-feature
         android:name="android.hardware.Camera"
@@ -13,12 +13,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-    <uses-feature
-        android:name="android.hardware.camera"
-        android:required="false" />
-
     <application
-        android:name=".MyApplication"
+        android:name="com.aitec.appbeber.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -26,7 +22,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".init.login.ui.LoginActivity"
+            android:name="com.aitec.appbeber.init.login.ui.LoginActivity"
             android:configChanges="screenSize|orientation"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
@@ -36,39 +32,68 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".init.registrerUser.ui.RegistrerUserActivity"
+            android:name="com.aitec.appbeber.init.registrerUser.ui.RegistrerUserActivity"
             android:noHistory="true"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".main.ui.MainActivity"
+            android:name="com.aitec.appbeber.main.ui.MainActivity"
             android:configChanges="screenSize|orientation"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".buy.ui.CarBuyActivity"
+            android:name="com.aitec.appbeber.buy.ui.CarBuyActivity"
             android:configChanges="screenSize|orientation"
             android:label="@string/title_activity_car_buy"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".detailsOrder.ui.DetailsOrderActivity"
+            android:name="com.aitec.appbeber.detailsOrder.ui.DetailsOrderActivity"
             android:label="@string/title_activity_details_order"
             android:theme="@style/AppTheme.NoActionBar" />
 
-        <service android:name=".MyFirebaseMessagingService">
+        <service android:name="com.aitec.appbeber.MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-        <service android:name=".MyFirebaseInstanceIDService">
+        <service android:name="com.aitec.appbeber.MyFirebaseInstanceIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
 
-        <activity android:name=".historyOrders.ui.HistoryOrderActivity"
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+
+        <activity
+            android:name="com.aitec.appbeber.historyOrders.ui.HistoryOrderActivity"
             android:label="Historial de Pedidos"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+
     </application>
 
 </manifest>

@@ -36,9 +36,12 @@
     <string name="title_activity_tab">TabActivity</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_car_buy">Carrito de Compras</string>
-    <string name="action_singout">Cerrar Sesion</string>
-    <string name="main_message_picture_source">Seleccion de donde obtener su imagen</string>
+    <string name="action_singout">Cerrar Sesión</string>
+    <string name="main_message_picture_source">Seleccione medio para  obtener imagen</string>
     <string name="title_activity_details_order">DetailsOrderActivity</string>
 
+    <string name="facebook_app_id">517126088666869</string>
+    <string name="fb_login_protocol_scheme">fb517126088666869</string>
+    <string name="default_notification_channel_id">firebase</string>
 
 </resources>
